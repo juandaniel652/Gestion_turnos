@@ -1,0 +1,6 @@
+Dinámica 2: "¿Qué patrón usarías?"
+• Análisis de mini casos para pensar en:
+- Elección de patrones de diseño
+- Ventajas de su aplicación
+• Espacio para que quienes lo hayan usado
+cuenten su experiencia.

@@ -1,0 +1,13 @@
+🧠 Organización del código
+Este proyecto fue desarrollado aplicando principios de diseño modular y buenas prácticas de POO:
+
+GestorTurnos: controla la lógica central del negocio.
+
+Turno, Cliente, Servicio: clases modelo.
+
+Notificador: patrón Strategy para enviar notificaciones simuladas.
+
+persistencia.py: serializa y deserializa los turnos de JSON.
+
+vistas.py: componentes visuales separados de la lógica.
+

@@ -1,0 +1,47 @@
+[
+    {
+        "id_turno": "c0c64bd0",
+        "cliente": {
+            "id_cliente": "002",
+            "nombre": "Carlos D\u00edaz",
+            "contacto": "carlos@wapp.com"
+        },
+        "servicio": {
+            "id_servicio": "S02",
+            "nombre": "Coloraci\u00f3n",
+            "duracion_min": 60
+        },
+        "fecha": "2025-06-04",
+        "hora": "14:00"
+    },
+    {
+        "id_turno": "fcfda310",
+        "cliente": {
+            "id_cliente": "006",
+            "nombre": "Javier L\u00f3pez",
+            "contacto": "javier.lopez@mail.com"
+        },
+        "servicio": {
+            "id_servicio": "S07",
+            "nombre": "Masaje",
+            "duracion_min": 60
+        },
+        "fecha": "2025-06-15",
+        "hora": "13:04"
+    },
+    {
+        "id_turno": "2fd43b15",
+        "cliente": {
+            "id_cliente": "008",
+            "nombre": "Pedro S\u00e1nchez",
+            "contacto": "pedro.sanchez@mail.com"
+        },
+        "servicio": {
+            "id_servicio": "S09",
+            "nombre": "Barba",
+            "duracion_min": 20
+        },
+        "fecha": "2025-04-03",
+        "hora": "12:09"
+    }
+]

@@ -1,0 +1,1 @@
+Usaremos el patrón Strategy para el sistema de notificaciones (el GestorTurnos puede usar cualquier estrategia sin conocer su implementación).

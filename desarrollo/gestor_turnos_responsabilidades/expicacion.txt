@@ -1,0 +1,9 @@
+Cargar clientes y servicios (inicialmente desde listas, luego desde archivos si querés).
+
+Verificar disponibilidad de horario.
+
+Asignar un turno.
+
+Guardar el turno en memoria (o luego en archivo).
+
+Notificar al cliente (usando una estrategia de notificación).

@@ -1,0 +1,9 @@
+Cliente: contiene datos del cliente (nombre, contacto, etc.).
+
+Servicio: representa un servicio disponible (duración, tipo).
+
+Turno: representa el turno asignado (fecha, hora, cliente, servicio).
+
+GestorTurnos: se encarga de asignar turnos y manejar conflictos.
+
+Notificador: clase base abstracta con subclases NotificadorEmail, NotificadorWhatsApp.

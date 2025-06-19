@@ -1,0 +1,4 @@
+● Tema elegido = Herramientas de procesamiento de datos
+● Qué están desarrollando = Herramienta para manejar o tranformar datos, automatizar alguna tarea
+● Qué concepto o patrón de POO están aplicando = Diseño de la erramienta utilizando clases, relaciones entre ellas
+diseño de orientado a objetos o modelado de datos
