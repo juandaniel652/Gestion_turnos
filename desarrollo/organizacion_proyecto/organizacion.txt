@@ -4,7 +4,7 @@ gestor_turnos/
 ├── interfaz/
 │   ├── app.py                  # App principal con Tkinter
 │   ├── vistas.py               # Componentes de la GUI
-│   └── helpers_gui.py 
+│   
 ├── modelos/
 │   ├── cliente.py              # Clase Cliente
 │   ├── servicio.py             # Clase Servicio
@@ -15,7 +15,7 @@ gestor_turnos/
 │   ├── notificador.py          # Clase base Notificador y subclases Email, WhatsApp
 ├── utils/
 │   ├── generador_id.py         # Para generar IDs únicos
-│   └── helpers.py              # Funciones auxiliares (formato fecha, validaciones)
+│   
 ├── datos/
 │   ├── turnos.json             # Archivo de persistencia simulada
 │   └── clientes.json
