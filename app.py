@@ -33,35 +33,41 @@ servicios_nombres_duracion = [
 ]
 
 clientes = [
-    Cliente(f"{i+1:03}", nombre, email)
-    for i, (nombre, email) in enumerate(nombres_emails)
+    Cliente(f"{indice+1:03}", nombre, email)
+    for indice, (nombre, email) in enumerate(nombres_emails)
 ]
-
 
 servicios = [
-    Servicio(f"S{i+1:02}", nombre, duracion)
-    for i, (nombre, duracion) in enumerate(servicios_nombres_duracion)
+    Servicio(f"S{indice+1:02}", nombre, duracion)
+    for indice, (nombre, duracion) in enumerate(servicios_nombres_duracion)
 ]
 
-class AppTurnos(ctk.CTk):
-    def __init__(self):
+
+class AppTurnos (ctk.CTk) :
+
+    def __init__ (self) :
+
         super().__init__()
         ctk.set_appearance_mode("dark")  # dark | light | system
         ctk.set_default_color_theme("blue")  # también: green, dark-blue
 
         self.title("💈 Gestor de Turnos")
+        self.iconbitmap("imagenes/logo_gestion_turnos.ico")
+
         self.geometry("700x550")
         self.gestor = GestorTurnos(NotificadorEmail())
 
         self.formulario = TurnoForm(self, self.gestor, clientes, servicios)
         self.formulario.pack(pady=15, padx=15, fill="x")
 
-        self.lista = TurnoLista(self, self.gestor)
-        self.lista.pack(pady=15, padx=15, fill="both", expand=True)
+        self.lista_de_los_turnos = TurnoLista(self, self.gestor)
+        self.lista_de_los_turnos.pack(pady=15, padx=15, fill="both", expand=True)
 
-        actualizar_btn = ctk.CTkButton(self, text="🔄 Actualizar Lista", command=self.lista.actualizar_lista)
-        actualizar_btn.pack(pady=10)
+        actualizar_boton = ctk.CTkButton(self, text="🔄 Actualizar Lista", command=self.lista_de_los_turnos.actualizar_lista)
+        actualizar_boton.pack(pady=10)
 
-if __name__ == "__main__":
+
+if __name__ == "__main__" :
+
     app = AppTurnos()
     app.mainloop()
