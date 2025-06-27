@@ -1,0 +1,120 @@
+📘 Explicación del Diagrama de Clases UML
+
+-----------------------------------------------------------------------
+
+🔷 1. Clases principales del dominio
+
+-----------------------------------------------------------------------
+
+✅ Cliente
+Representa a una persona que solicita un turno.
+Atributos comunes: nombre, email u otros datos de contacto.
+
+
+✅ Servicio
+Representa el tipo de servicio solicitado (por ejemplo: consulta, corte, instalación).
+Atributos: nombre, duración.
+
+
+✅ Turno
+Representa la reserva concreta realizada por un cliente para un servicio en una fecha y hora determinada.
+
+
+Atributos:
+
+fecha
+hora
+cliente: instancia de la clase Cliente
+servicio: instancia de la clase Servicio
+
+
+✔ Relaciones:
+
+Turno se compone de un Cliente y un Servicio, lo que se representa en UML con líneas de composición (rombos negros).
+Es una relación "tiene un": Un turno tiene un cliente y tiene un servicio.
+
+
+-----------------------------------------------------------------------
+
+🔶 2. Lógica del sistema
+
+-----------------------------------------------------------------------
+
+
+✅ GestorTurnos
+
+Se encarga de administrar la creación y cancelación de turnos.
+
+
+Métodos clave:
+
+crear_turno()
+cancelar_turno()
+
+
+Usa la clase Turno para instanciar y gestionar turnos.
+
+✔ Relación:
+
+GestorTurnos crea instancias de Turno (representado con una flecha simple).
+
+
+-----------------------------------------------------------------------
+
+🧩 3. Patrón de Diseño: Strategy
+
+-----------------------------------------------------------------------
+
+
+Este patrón se usa para cambiar dinámicamente el método de notificación sin alterar la clase principal. Se representa con:
+
+✅ EstrategiaNotificacion (<<interface>>)
+
+Es una interfaz que define el método notificar().
+Cualquier clase que la implemente debe definir cómo se envía la notificación.
+
+
+✅ NotificacionEmail
+Implementa la estrategia para notificar por correo electrónico.
+Implementa el método notificar().
+
+
+✅ NotificacionSMS
+Implementa la estrategia para notificar por SMS.
+También define su propia lógica en notificar().
+
+
+✅ Notificador
+Clase que usa una estrategia de notificación.
+Tiene un atributo: estrategia, de tipo EstrategiaNotificacion.
+
+
+Métodos clave:
+
+set_estrategia(): permite cambiar dinámicamente la estrategia.
+enviar_mensaje(): ejecuta el método notificar() de la estrategia actual.
+
+
+✔ Relaciones del patrón Strategy:
+
+Notificador usa la interfaz EstrategiaNotificacion → flecha punteada (asociación con interfaz).
+
+NotificacionEmail y NotificacionSMS implementan la interfaz → flechas con cabeza vacía (herencia).
+
+
+-----------------------------------------------------------------------
+
+🔚 Resumen funcional
+
+-----------------------------------------------------------------------
+
+
+El sistema gestiona turnos entre clientes y servicios mediante una arquitectura orientada a objetos.
+
+La lógica principal está en GestorTurnos.
+
+La funcionalidad de notificación es extensible gracias al patrón Strategy:
+
+Podés agregar nuevas estrategias como NotificacionWhatsApp sin modificar el código del Notificador.
+
+Esto respeta el principio de abierto/cerrado del diseño (Open/Closed Principle).
