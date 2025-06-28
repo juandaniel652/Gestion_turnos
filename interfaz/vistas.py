@@ -70,6 +70,10 @@ class TurnoLista (ctk.CTkFrame) :
 
         super().__init__(master)
         self.gestor = gestor
+        self.pantalla_turnos_asignados()
+
+
+    def pantalla_turnos_asignados (self) : 
 
         etiqueta_turnos_elegidos = ctk.CTkLabel(self, text="Turnos asignados", font=ctk.CTkFont(size=18, weight="bold"))
         etiqueta_turnos_elegidos.pack(pady=5)
